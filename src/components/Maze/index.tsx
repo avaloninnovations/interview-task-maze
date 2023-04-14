@@ -5,10 +5,12 @@ import styles from "./Maze.module.scss";
 
 function Cell({ data }: { data: MazeCell }) {
   return (
-    <div className={cn(styles.cell, {
-      [styles.start]: data.isStart,
-      [styles.end]: data.isEnd,
-    })}></div>
+    <div
+      className={cn(styles.cell, {
+        [styles.start]: data.isStart,
+        [styles.end]: data.isEnd,
+      })}
+    ></div>
   );
 }
 
@@ -20,20 +22,14 @@ function Maze() {
       <>
         {maze.map((column, columnIndex) => {
           return column.map((cell, cellIndex) => {
-            return (
-              <Cell key={`${columnIndex}-${cellIndex}`} data={cell} />
-            );
-          })
+            return <Cell key={`${columnIndex}-${cellIndex}`} data={cell} />;
+          });
         })}
       </>
     );
   };
 
-  return (
-    <div className={styles.mazeContainer}>
-      {renderMaze()}
-    </div>
-  );
+  return <div className={styles.mazeContainer}>{renderMaze()}</div>;
 }
 
 export default Maze;
