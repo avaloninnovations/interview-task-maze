@@ -1,38 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Interview Task Maze - Avalon Innovations
+
+Welcome to the `interview-task-maze` project! This project is used to evaluate candidates for web development positions at Avalon Innovations. The application is a simplified Next.js app designed to randomly generate (and possibly solve) 2D mazes.
+
+## Overview
+
+The purpose of this task is to assess your ability to work with common web development tools and concepts such as Next.js, React, Context, Components, and Hooks. You will be asked to extend the existing codebase and implement new features or improve existing ones. This will help us evaluate your coding skills, problem-solving abilities, and overall understanding of web development principles.
 
 ## Getting Started
 
-First, run the development server:
+Before you begin, make sure you have the following installed:
+
+- Node.js (v16.0 or higher)
+
+To set up the project, follow these steps:
+
+1. Clone the repository
+
+2. Install dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Start development server
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The application should now be running at `http://localhost:3000`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Task Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You will receive a set of tasks to complete as part of the interview process. These tasks will involve extending the application, implementing new features, or improving existing ones. Make sure to understand the requirements carefully before proceeding.
 
-## Learn More
+## Submission
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Once you have completed the tasks, please follow the submission guidelines provided by the Avalon Innovations team.

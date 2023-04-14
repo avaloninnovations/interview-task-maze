@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import styles from "./Maze.module.scss";
 
-function Cell({ data, x, y }: { data: MazeCell, x: number, y: number}) {
+function Cell({ data }: { data: MazeCell }) {
   return (
     <div className={cn(styles.cell, {
       [styles.start]: data.isStart,
@@ -21,7 +21,7 @@ function Maze() {
         {maze.map((column, columnIndex) => {
           return column.map((cell, cellIndex) => {
             return (
-              <Cell key={`${columnIndex}-${cellIndex}`} x={columnIndex} y={cellIndex} data={cell} />
+              <Cell key={`${columnIndex}-${cellIndex}`} data={cell} />
             );
           })
         })}
