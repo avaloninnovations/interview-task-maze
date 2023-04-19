@@ -8,6 +8,7 @@ import React, {
 
 export type MazeCell = {
   isStart: boolean;
+  isVisited: boolean;
   isEnd: boolean;
   walls: {
     top: boolean;
@@ -24,32 +25,47 @@ interface MazeContextData {
 
 const MazeContext = createContext<MazeContextData | undefined>(undefined);
 
+const createMaze = (): MazeCell[][] => {
+  const maze: MazeCell[][] = [];
+
+  for (let x = 0; x < 10; x++) {
+    const column: MazeCell[] = [];
+
+    for (let y = 0; y < 10; y++) {
+      const cell: MazeCell = {
+        isStart: x === 0 && y === 0,
+        isEnd: x === 9 && y === 9,
+        isVisited: false,
+        walls: {
+          top: true,
+          right: true,
+          bottom: true,
+          left: true,
+        }
+      };
+
+      column.push(cell);
+    }
+
+    maze.push(column);
+  }
+
+  return maze;
+};
+
+const randomizeMaze = (maze: MazeCell[][]) => {
+  // TODO: Generate a random maze
+
+  return maze;
+}
+
 export const MazeProvider = ({ children }: PropsWithChildren) => {
   const [maze, setMaze] = useState<MazeCell[][]>([]);
 
   const generateMaze = () => {
-    const newMaze: MazeCell[][] = [];
+    const newMaze = createMaze();
 
-    for (let x = 0; x < 10; x++) {
-      const column: MazeCell[] = [];
-
-      for (let y = 0; y < 10; y++) {
-        const cell: MazeCell = {
-          isStart: (x === 0 && y === 0) ? true : false,
-          isEnd: (x === 9 && y === 9) ? true : false,
-          walls: {
-            top: true,
-            right: true,
-            bottom: true,
-            left: true,
-          }
-        };
-
-        column.push(cell);
-      }
-
-      newMaze.push(column);
-    }
+    randomizeMaze(newMaze);
 
     setMaze(newMaze);
   };

@@ -9,6 +9,10 @@ function Cell({ data }: { data: MazeCell }) {
       className={cn(styles.cell, {
         [styles.start]: data.isStart,
         [styles.end]: data.isEnd,
+        [styles.top]: data.walls.top,
+        [styles.right]: data.walls.right,
+        [styles.bottom]: data.walls.bottom,
+        [styles.left]: data.walls.left,
       })}
     ></div>
   );
